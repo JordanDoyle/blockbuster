@@ -1,0 +1,25 @@
+// this is a comment, any lines that start with //
+// (and blank lines) should be ignored
+
+[CD data]
+
+// data is artist, noOfTracks, playingTime, title, itemCode, cost
+
+James Blunt,15,68, Back to Bedlam, LM003604,498
+Duffy,10,73, Rockferry, LM003553,898
+Adele,12,19,75, LM003580,798
+Robert Plant and Alison Krauss,13,72, Raising Sand, LM003750,898
+Goldfrapp,10,72, Seventh Tree, LM003873,1299
+Amy Winehouse,11,70, Back To Black, LM003698,698
+Jack Johnson,15,67, Sleep Through The Static, LM003773,898
+ Mark Ronson,14,74, Version, LM003365,698, 
+Radiohead,10,75, In Rainbows , LM003771,798,
+Nick Cave,11,68, Dig!!! Lazarus Dig!!!, LM003751,1199
+Nickelback,11,72, All the Right Reasons, LM003915,598
+
+[DVD data]
+
+// data is director, playingTime, title, itemCode, cost
+
+Chris Miller,92, Shrek The Third, LM004314,1026
+Robert Zemeckis,114, Beowulf , LM004079,900

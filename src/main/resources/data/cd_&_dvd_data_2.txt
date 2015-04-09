@@ -1,0 +1,23 @@
+[DVD data]
+// none available yet
+
+[CD data]
+// data is artist, noOfTracks, playingTime, title, itemCode, cost
+Goldfrapp,10,72, Seventh Tree, LM003873,1299
+Amy Winehouse,11,70, Back To Black, LM003698,698
+Jack Johnson, 15,67, Sleep Through The Static, LM003773,898
+
+[DVD data]
+// data is director, playingTime, title, itemCode, cost
+Chris Miller,92, Shrek The Third, LM004314,1026
+Robert Zemeckis,114, Beowulf , LM004079,900
+Phyllida Lloyd,118,  Mamma Mia, LM004984,798
+Joe Wright,130, Atonement, LM004720,1293
+Andrew Adamson,125, The Chronicles of Narnia: Prince Caspian, LM004178,498
+
+[cd data]
+// data is artist, noOfTracks, playingTime, title, itemCode, cost 
+Mark Ronson,14,75, Version, LM003365,698
+Radiohead,10,74, In Rainbows , LM003771,798
+Nick Cave,11,68, Dig!!! Lazarus Dig!!!, LM003751,1199
+Nickelback, 11,68, All the Right Reasons, LM003915,598
