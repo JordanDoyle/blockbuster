@@ -73,13 +73,9 @@ public final class Library {
 	public void printAllDetailsSortedOnTitle() // who picks the method names for
 	{                                          // these tasks..?
 		List<LibraryItem> items = App.items;
-		Collections.sort(items, new Comparator<LibraryItem>()
-		{
-			@Override
-			public int compare(LibraryItem arg0, LibraryItem arg1)
-			{
-				return arg0.getName().compareTo(arg1.getName());
-			}
+		
+		Collections.sort(items, (arg0, arg1) -> {
+			return arg0.getName().compareTo(arg1.getName());
 		});
 
 		App.LOGGER.debug("SORTED DETAILS TEST");

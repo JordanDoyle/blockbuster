@@ -69,13 +69,8 @@ public class GUI extends JFrame {
 		this.contentPane.add(this.tabbedPane);
 
 		List<LibraryItem> items = App.items;
-		Collections.sort(items, new Comparator<LibraryItem>()
-		{
-			@Override
-			public int compare(LibraryItem arg0, LibraryItem arg1)
-			{
-				return arg0.getType().toString().compareTo(arg1.getType().toString());
-			}
+		Collections.sort(items, (arg0, arg1) -> {
+			return arg0.getType().toString().compareTo(arg1.getType().toString());
 		});
 
 		EnumLineType header = null;
@@ -139,7 +134,7 @@ public class GUI extends JFrame {
 				}
 			}
 			
-			btnNewButton.addActionListener((e)-> {
+			btnNewButton.addActionListener((e) -> {
 				if(!App.USER.hasItem() && item.toggleItem())
 				{	
 					if(borrow)
