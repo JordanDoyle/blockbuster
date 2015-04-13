@@ -34,7 +34,7 @@ public class User {
 	{
 		if(!hasItem()) return false;
 		
-		return (hasItem.equals(item));
+		return (this.hasItem.equals(item));
 	}
 
 	/**
