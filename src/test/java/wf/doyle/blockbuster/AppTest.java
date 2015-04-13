@@ -1,38 +1,36 @@
 package wf.doyle.blockbuster;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.lang.reflect.Field;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import wf.doyle.blockbuster.file.FileReader;
+import wf.doyle.blockbuster.item.LibraryItem;
+import wf.doyle.blockbuster.item.items.audiovisual.DVD;
 
 /**
- * Unit test for simple App.
+ * Unit test for blockbuster
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+public class AppTest {
+	/**
+	 * 
+	 */
+	@Test
+	public void assertReflection() {
+		LibraryItem item = new DVD();
+		
+		Field f = FileReader.getField("title", item.getClass());
+		
+		Assert.assertNotNull(f);
+		
+		LibraryItem i = FileReader.setField(f, item, "testCase");
+		
+		try {
+			Assert.assertEquals(f.get(i), "testCase");
+		} catch(Exception e) {
+			Assert.fail("Getting value of String using reflection failed");
+			e.printStackTrace(System.err);
+		}
+	}
 }
