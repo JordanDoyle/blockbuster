@@ -149,13 +149,13 @@ public abstract class LibraryItem {
 	 * @return true if we now have the item
 	 */
 	public boolean toggleItem()
-    {
-	    if(this.getLoan()) {
-	    	this.returnItem();
-	    	return false;
-	    } else {
-	    	this.takeItem();
-	    	return true;
-	    }
-    }
+	{
+		if(this.getLoan()) {
+			this.returnItem();
+			return false;
+		} else {
+			this.takeItem();
+			return true;
+		}
+	}
 }
