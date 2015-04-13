@@ -1,27 +1,21 @@
 package wf.doyle.blockbuster.gui;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.lang.reflect.Field;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import javax.swing.JTabbedPane;
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import wf.doyle.blockbuster.App;
-import wf.doyle.blockbuster.file.FileReader;
 import wf.doyle.blockbuster.item.LibraryItem;
 import wf.doyle.blockbuster.item.items.printed.Book;
 import wf.doyle.blockbuster.item.items.printed.Periodical;
@@ -35,13 +29,19 @@ import wf.doyle.blockbuster.util.EnumLineType;
 public class GUI extends JFrame {
 
 	/**
+	 * Serial Version UID
+	 */
+    private static final long serialVersionUID = 1L;
+
+	/**
 	 * Content Pane
 	 */
 	private JPanel contentPane;
+	
 	/**
 	 * Tabbed Pane
 	 */
-	private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+	private final JTabbedPane tabbedPane = new JTabbedPane(SwingConstants.TOP);
 
 	/**
 	 * Create the frame.
@@ -57,7 +57,6 @@ public class GUI extends JFrame {
 		}
 		catch(ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
