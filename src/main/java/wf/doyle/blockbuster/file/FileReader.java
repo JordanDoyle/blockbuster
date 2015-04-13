@@ -203,9 +203,8 @@ public class FileReader {
 	 *            instance to set the value in
 	 * @param data
 	 *            data to set the value as
-	 * @return instance of LibraryItem
 	 */
-	public static LibraryItem setField(Field f, LibraryItem instance, String data)
+	public static void setField(Field f, LibraryItem instance, String data)
 	{
 		try
 		{
@@ -218,7 +217,7 @@ public class FileReader {
 					f.setAccessible(true);
 					f.set(instance, val);
 
-					return instance;
+					return;
 				}
 			}
 			catch(NumberFormatException nfe)
@@ -232,7 +231,7 @@ public class FileReader {
 				f.setAccessible(true);
 				f.set(instance, b);
 
-				return instance;
+				return;
 			}
 
 			f.setAccessible(true);
@@ -243,7 +242,7 @@ public class FileReader {
 			App.LOGGER.error("Couldn't set value of " + f.getName() + " in " + instance.getClass().getName(), e);
 		}
 
-		return instance;
+		return;
 	}
 
 	/**
@@ -292,7 +291,7 @@ public class FileReader {
 
 				Field field = getField(this.lineContains[key].trim(), itemClass);
 
-				item = setField(field, item, value);
+				FileReader.setField(field, item, value);
 			}
 
 			// add this storage class to our main array

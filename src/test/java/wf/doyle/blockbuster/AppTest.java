@@ -24,13 +24,12 @@ public class AppTest {
 		
 		Assert.assertNotNull(f);
 		
-		LibraryItem i = FileReader.setField(f, item, "testCase");
+		FileReader.setField(f, item, "testCase");
 		
 		try {
-			Assert.assertEquals(f.get(i), "testCase");
+			Assert.assertEquals(f.get(item), "testCase");
 		} catch(Exception e) {
 			Assert.fail("Getting value of String using reflection failed");
-			e.printStackTrace(System.err);
 		}
 	}
 }
